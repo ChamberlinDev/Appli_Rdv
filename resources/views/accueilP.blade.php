@@ -45,7 +45,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                   @include('patient.header')
+                   @include('patient.headerP')
 
                   
 
