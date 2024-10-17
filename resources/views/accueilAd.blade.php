@@ -29,7 +29,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-       @include('admin.slidebar')
+       @include('admin.slidebarAd')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -44,7 +44,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                   @include('admin.header')
+                   @include('admin.headerAd')
 
                   
 

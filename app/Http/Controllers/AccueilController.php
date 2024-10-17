@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AccueilController extends Controller
@@ -17,6 +18,7 @@ class AccueilController extends Controller
         return view('accueilM');
     }
     public function indexAdmin(){
-        return view('accueilAd');
+        $users = User::paginate(10); 
+        return view('accueilAd', compact('users'));
     }
 }

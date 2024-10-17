@@ -25,7 +25,6 @@
 </head>
 
 <body id="page-top">
-@yield('content')
 
     <!-- Page Wrapper -->
     <div id="wrapper">
