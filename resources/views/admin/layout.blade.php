@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>Bienvenu(e) sur notre plateforme</h4>
-    
+    <h4>Espace Admin</h4>
+    @include('personnels.liste')
     
 </body>
 </html>

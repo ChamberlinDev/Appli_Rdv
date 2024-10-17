@@ -9,11 +9,11 @@
                     <a href="#" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 
                     <div class="nav-item">
-                        <a href="#" class="nav-link " ><i class="fa fa-users"></i>Medecins</a>
+                        <a href="#" class="nav-link " ><i class="fa fa-users"></i>Demandes de rendez-vous</a>
                       
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav-link"><i class="fa fa-calendar"></i>Rendez-vous</a>
+                        <a href="#" class="nav-link"><i class="fa fa-calendar"></i>Definir agenda</a>
                     </div>
 
                     <div class="nav-item">

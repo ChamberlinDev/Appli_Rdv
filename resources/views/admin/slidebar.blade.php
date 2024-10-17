@@ -12,9 +12,21 @@
                         <a href="#" class="nav-link " ><i class="fa fa-users"></i>Medecins</a>
                       
                     </div>
+
+                    <div class="nav-item">
+                        <a href="#" class="nav-link" ><i class="fa fa-users"></i>Patients</a>
+                      
+                    </div>
+
                     <div class="nav-item">
                         <a href="#" class="nav-link"><i class="fa fa-calendar"></i>Rendez-vous</a>
                     </div>
+                    
+                    <div class="nav-item">
+                        <a href="#" class="nav-link" ><i class="fa fa-user"></i>Comptes</a>
+                      
+                    </div>
+
 
                     <div class="nav-item">
                         <a href="#" class="nav-link" ><i class="bi bi-arrow-clockwise"></i>Historiques</a>

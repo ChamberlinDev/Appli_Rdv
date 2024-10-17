@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>Bienvenu(e) sur notre plateforme</h4>
+    <h4>Espace de patient(e)</h4>
     
     
 </body>

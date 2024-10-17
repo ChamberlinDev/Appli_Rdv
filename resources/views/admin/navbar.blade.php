@@ -9,8 +9,8 @@
                     
                    
                     <div class="nav-item">
-                        <a href="{{route('loginView')}}" class="btn btn-secondary">Se connecter</a>
-                        <a href="{{route('registreView')}}" class="btn btn-primary">S'inscrire</a>
+                    <a href="#" class="text-dark"> {{auth()->user()->prenom}} {{auth()->user()->nom}}<i class="fa fa-user"></i></a>
+                    <a href="{{route('logoutUser')}}" class="btn btn-danger"> Deconnexion</a>
                     </div>
                 </div>
             </nav>
