@@ -3,6 +3,8 @@
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MedecinController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\RdvController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -22,4 +24,17 @@ Route::get('/login', [AuthController::class, 'loginView'])->name('loginView');
 Route::post('/registre_save', [AuthController::class, 'registre'])->name('registre_save');
 Route::post('/login_save', [AuthController::class, 'login'])->name('login_save');
 
-Route::get('/ajouter', [MedecinController::class, 'create'])->name('ajouter');
+//Medecins
+Route::post('/ajouter_save', [MedecinController::class, 'create'])->name('ajouter_save');
+Route::get('/ajouterM',[MedecinController::class,'listeView'])->name('listeView');
+Route::get('/ajouter',[MedecinController::class,'index'])->name('ajouter');
+
+
+
+// Rendez-vous
+Route::get('/liste_rdv',[RdvController::class,'index'])->name('liste_rdv');
+
+
+
+// profil
+Route:: get('/profil',[ProfilController::class,'index'])->name('profil');

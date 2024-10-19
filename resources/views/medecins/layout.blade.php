@@ -8,6 +8,6 @@
 <body>
     <h4>Espace medecin(e)</h4>
     
-    
+    @include('rendez-vous.liste')
 </body>
 </html>

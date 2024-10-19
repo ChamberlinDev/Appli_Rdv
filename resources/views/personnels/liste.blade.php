@@ -10,12 +10,13 @@
 
 
   <body>
-    <div class="container text-center">
-    <h1>Liste des etudiants</h1>
-    <hr>
-    <a href="#" class="btn btn-primary">Ajouter un compte</a>
+  <a href="{{route('ajouter')}}" class="btn btn-primary">Ajouter un compte</a>
     <hr>
     
+    <div class="container text-center">
+    <h5>Liste des comptes</h5>
+    <hr>
+   
     @if(session('success'))
    <div class="alert alert-success">
     {{session('success')}}

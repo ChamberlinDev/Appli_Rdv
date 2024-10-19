@@ -55,8 +55,9 @@
 
 
             @include('partials.layout')
-        
-
+            <div class="container">
+        @yield('content')
+            </div>
             <!-- Footer Start -->
          @include('partials.footer')
             <!-- Footer End -->

@@ -47,7 +47,6 @@
                 <label for="role" class="form-label">Rôle</label>
                 <select name="role" class="form-control form-control-sm">
                 <option value="" disabled selected>Choisissez un rôle</option>
-                    <option value="medecin">Médecin</option>
                     <option value="patient">Patient</option>
                     <option value="admin">Admin</option>
 

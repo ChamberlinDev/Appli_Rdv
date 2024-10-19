@@ -9,7 +9,7 @@
                     <a href="#" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 
                     <div class="nav-item">
-                        <a href="#" class="nav-link " ><i class="fa fa-users"></i>Medecins</a>
+                        <a href="{{route('accueilAd')}}" class="nav-link " ><i class="fa fa-users"></i>Medecins</a>
                       
                     </div>
 

@@ -43,11 +43,11 @@ class AuthController extends Controller
         if (Auth::attempt($dat)) {
             $user = Auth::user(); // Récupère l'utilisateur authentifié
     
-            if ($user->role === 'medecin') {
-                return redirect()->route('accueilM'); 
-            } else {
-                if($user->role==='patient'){
+            if ($user->role === 'patient') {
                 return redirect()->route('accueilP'); 
+            } else {
+                if($user->role==='medecin'){
+                return redirect()->route('accueilM'); 
                 }else{
 
                 return redirect()->route('accueilAd'); 
