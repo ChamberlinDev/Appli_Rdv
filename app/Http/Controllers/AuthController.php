@@ -46,21 +46,17 @@ class AuthController extends Controller
             if ($user->role === 'patient') {
                 return redirect()->route('accueilP'); 
             } else {
-                if($user->role==='medecin'){
-                return redirect()->route('accueilM'); 
-                }else{
-
+                if($user->role==='admin'){
                 return redirect()->route('accueilAd'); 
-
+                }else{
+                    return redirect()->route('accueilM');
+                
                 }
 
             }
-    
-        } else {
-            return redirect()->back()->with('error', 'Mot de passe ou email incorrect');
-        }
         
     }
+}
 
        
 

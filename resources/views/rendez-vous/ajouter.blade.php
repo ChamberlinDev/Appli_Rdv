@@ -8,18 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-<form>
+<form action="" method="">
   <div class="form-group">
     <label for="objet">Objet du rendez-vous</label>
-    <input type="text" class="form-control" id="objet"  placeholder="Entrer l'objet du rendez-vous">
+    <input type="text" class="form-control" id="objet" placeholder="Entrer l'objet du rendez-vous">
   </div>
   <div class="form-group">
-    <label for="contact">email ou numero telephone</label>
+    <label for="contact">Telephone</label>
     <input type="text" class="form-control" id="contact">
   </div>
   <div class="form-group">
-    <label for="contact">....</label>
-    <input type="text" class="form-control" id="contact">
+    <label for="contact">Date</label>
+    <input type="date" class="form-control" id="contact">
   </div>
  
   <button type="submit" class="btn btn-primary">Soumettre</button>

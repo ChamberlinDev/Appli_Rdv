@@ -9,7 +9,7 @@
                     
                    
                     <div class="nav-item">
-                    <a href="#" class="text-dark"> {{auth()->user()->prenom}} {{auth()->user()->nom}}  <i class="fa fa-user"></i></a>
+                    <a href="{{route('profil')}}" class="text-dark"> {{auth()->user()->prenom}} {{auth()->user()->nom}}  <i class="fa fa-user"></i></a>
                     <a href="{{route('logoutUser')}}" class="btn btn-danger"> Deconnexion</a>
                     </div>
                 </div>

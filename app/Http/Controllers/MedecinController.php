@@ -18,8 +18,8 @@ class MedecinController extends Controller
 
     }
     public function listeView(){
-     $users = User::where('role', 'medecin')->paginate(10); 
-    return view('accueilAd', compact('users'));
+        $users = Medecin::paginate(10); 
+        return view('accueilAd', compact('users'));
      }
     
 
@@ -29,14 +29,17 @@ class MedecinController extends Controller
     public function create(Request $request)
     {
         $user = $request->validate([
+            
             'nom'=>'required',
             'prenom'=>'required',
-            'telephone'=>'required|integer|min:9',
-            'role'=>'required',
+            'telephone'=>'required',
             'email'=> 'required',
+            'role'=>'required',
             'password'=>'required|string|min:7'
         ]);
+       
         $user['password']=Hash::make($request->password);
+        User:: create($user);
         Medecin:: create($user);
         return redirect()->route('listeView')->with('success', 'Ajout reussi!');
 

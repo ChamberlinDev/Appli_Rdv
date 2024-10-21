@@ -9,11 +9,11 @@ class Medecin extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'image',
          'nom',
          'prenom',
-         'specialite',
          'email',
+         'telephone',
+         'role',
          'password',
      ];
  

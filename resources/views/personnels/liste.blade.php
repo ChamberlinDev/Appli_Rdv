@@ -16,23 +16,23 @@
     <div class="container text-center">
     <h5>Liste des comptes</h5>
     <hr>
-   
     @if(session('success'))
-   <div class="alert alert-success">
-    {{session('success')}}
-   </div>
-   @endif
+            <div class="alert alert-success" id="success-alert">
+                {{ session('success') }}
+            </div>
+        @endif
+    
     </div>
     <div class="container text-center">
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>Id</th>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Telephone</th>
                 <th>Email</th>
-                <th>Role</th>
+                <th>Telephone</th>
+                <th>Profession</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -45,14 +45,14 @@
                 <td>{{$ide}}</td>
                 <td>{{$user->nom}}</td>
                 <td>{{$user->prenom}}</td>
-                <td>{{$user->telephone}}</td>
                 <td>{{$user->email}}</td>
+                <td>{{$user->telephone}}</td>
                 <td>{{$user->role}}</td>
+
                 <td>
                     <a href="#" class="btn btn-primary">Voir</a>
                     <a href="#" class="btn btn-danger">Bloque</a>
                 </td>
-
 
             </tr>
             @php
@@ -65,6 +65,7 @@
     {{$users->links()}}
     </div>
 
+    
 
 
 
@@ -81,6 +82,14 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+       const successAlert = document.getElementById('success-alert');
+    if (successAlert) {
+        // Masquez l'alerte après 5 secondes
+        setTimeout(() => {
+            successAlert.style.display = 'none';
+        }, 2000);
+    }
+    </script>
   </body>
 </html>

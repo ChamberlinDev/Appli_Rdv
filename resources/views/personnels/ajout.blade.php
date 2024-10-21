@@ -16,27 +16,39 @@
     
             
             <div class="mb-3">
-                <label for="nom" class="form-label">Nom</label>
+                <label for="nom" class="form-label">Nom du medecin</label>
                 <input type="text" name="nom" class="form-control form-control-sm"  >
                 @error('nom')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="prenom" class="form-label">Prenom</label>
+                <label for="prenom" class="form-label">Prenom du medecin</label>
                 <input type="text" name="prenom" class="form-control form-control-sm"  >
                 @error('prenom')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
-            
             <div class="mb-3">
-                <label for="telephone" class="form-label">Telephone</label>
-                <input type="text" name="telephone" class="form-control form-control-sm"  >
-                @error('telephone')
+            <label for="specialite" class="form-label">Specialité</label>
+                <select name="specialite" class="form-control form-control-sm">
+                <option value="" disabled selected>Entrer la specialite</option>
+                <option value="Generaliste">Generaliste</option>
+                <option value="Dentiste">Dentiste</option>
+                <option value="Ophtalmologue">Ophtalmologue</option>
+                <option value="Dermatologue">Dermatologue</option>
+                <option value="Chirurgien">Chirurgien</option>
+                <option value="Gynecologue">Gynecologue</option>
+                <option value="Sage femme">Sage femme</option>
+                <option value="Autre">Autre...</option>
+
+                </select>
+
+                @error('specialite')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
+           
             <div class="mb-3">
                 <label for="email" class="form-label">Adresse email</label>
                 <input type="email" name="email" class="form-control form-control-sm"  >
@@ -45,11 +57,17 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="role" class="form-label">Rôle</label>
+                <label for="telephone" class="form-label">Telephone</label>
+                <input type="text" name="telephone" class="form-control form-control-sm"  >
+                @error('telephone')
+                <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="role" class="form-label">Profession</label>
                 <select name="role" class="form-control form-control-sm">
-                <option value="" disabled selected>Choisissez un rôle</option>
-                    <option value="medecin">Médecin</option>
-                    
+                <option value="" disabled selected>Quel est votre profil</option>
+                <option value="medecin">Medecin</option>
 
                 </select>
                 @error('role')

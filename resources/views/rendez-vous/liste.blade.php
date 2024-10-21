@@ -27,10 +27,10 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
+                <th>Nom du patient</th>
+                <th>Prenom du patient</th>
+                <th>Objet</th>
                 <th>Telephone</th>
-                <th>Email</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -43,6 +43,7 @@
                 <td>{{$ide}}</td>
                 <td>{{$user->nom}}</td>
                 <td>{{$user->prenom}}</td>
+                <td>{{$user->objet}}</td>
                 <td>{{$user->telephone}}</td>
                 <td>{{$user->email}}</td>
                 <td>

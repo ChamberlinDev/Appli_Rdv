@@ -15,7 +15,7 @@
                     <a href="#" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                 
                     <div class="nav-item">
-                        <a href="{{route('liste_rdv')}}" class="nav-link " ><i class="fa fa-users"></i>Demandes de rendez-vous</a>
+                        <a href="{{route('liste_rdv')}}" class="nav-link " ><i class="fa fa-users"></i>Demandes Rdv</a>
                       
                     </div>
                     <div class="nav-item">

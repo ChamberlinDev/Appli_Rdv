@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('rendez-vouses', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_patient');
+            $table->string('prenom_patient');
+            $table->integer('telephone_patient');
+            $table->string('objet');
+            $table->date('Date_rdv');
+            $table->string('nom_medecin');
             $table->timestamps();
         });
     }
