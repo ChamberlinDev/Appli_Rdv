@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Patient;
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
@@ -32,7 +32,7 @@ class AuthController extends Controller
             'password'=>'required|string|min:7'
         ]);
         $user['password']=Hash::make($request->password);
-        User:: create($user);
+        Patient:: create($user);
         return redirect()->route('loginView')->with('success', 'Inscription reussite! Connectez-vous msintenant');
 
 

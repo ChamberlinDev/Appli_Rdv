@@ -13,7 +13,7 @@
                     <div class="col-lg-8">
                         <h4>Trouver un medecin</h4>
                         <form class="d-flex align-items-center">
-                            <input type="text" name="nom" class="form-control me-2" placeholder="spécialité, nom, adresse..." >
+                            <input type="text" name="nom" class="form-control form-control me-2" placeholder="spécialité, nom, adresse..." >
                             <a class="btn btn-info" href="#">Rechercher</a>
                         </form>
                     </div>
