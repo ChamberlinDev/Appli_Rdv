@@ -14,9 +14,13 @@ class AuthController extends Controller
       public function registreView(){
         return view('auth.registre');
     }
+    public function registreMedecin(){
+        return view('auth_medecin.registre');
+    }
     public function loginView(){
         return view('auth.login');
     }
+
 
     public function registre(Request $request){
         $user = $request->validate([

@@ -11,15 +11,15 @@ class AccueilController extends Controller
         return view('main');
     }
     public function indexPatient(){
-        return view('accueilP');
+        // return view('accueilP');
 
     }
     public function indexMedecin(){
-        $users = User::paginate(10); 
-        return view('accueilM', compact('users'));
+        // $users = User::paginate(10); 
+        // return view('accueilM', compact('users'));
     }
     public function indexAdmin(){
-        $users = User::where('role', 'medecin')->paginate(10); 
-        return view('accueilAd', compact('users'));
+        // $users = User::where('role', 'medecin')->paginate(10); 
+        // return view('accueilAd', compact('users'));
     }
 }
