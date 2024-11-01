@@ -2,41 +2,39 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Patient;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
 
+use App\Models\User; 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 class AuthController extends Controller
 {
-      //
-      public function registreView(){
+    //
+    public function registreView(){
         return view('auth.registre');
     }
-    public function registreMedecin(){
-        return view('auth_medecin.registre');
+
+    public function registre(Request $request){
+        $user=$request->validate([
+            'nom'=>'required',
+            'prenom'=>'required',
+            'role'=>'required',
+            'telephone'=>'required|integer|min:8',
+            'email'=>'required',
+            'password'=>'required|string|min:8',
+        ]);
+        $user['password']=Hash::make($request->password);
+        User::create($user);
+
+         return redirect()->route('loginView')->with('success', 'inscription reussite! Connectez-vous maintenant');
+
     }
+
     public function loginView(){
         return view('auth.login');
     }
 
-
-    public function registre(Request $request){
-        $user = $request->validate([
-            'nom'=>'required',
-            'prenom'=>'required',
-            'telephone'=>'required|integer|min:9',
-            'role'=>'required',
-            'email'=> 'required',
-            'password'=>'required|string|min:7'
-        ]);
-        $user['password']=Hash::make($request->password);
-        Patient:: create($user);
-        return redirect()->route('loginView')->with('success', 'Inscription reussite! Connectez-vous msintenant');
-
-
-    }
 
     public function login(Request $request){
 
@@ -47,35 +45,24 @@ class AuthController extends Controller
         if (Auth::attempt($dat)) {
             $user = Auth::user(); // Récupère l'utilisateur authentifié
     
-            if ($user->role === 'patient') {
-                return redirect()->route('accueilP'); 
-            } else {
-                if($user->role==='admin'){
-                return redirect()->route('accueilAd'); 
-                }else{
-                    return redirect()->route('accueilM');
-                
-                }
-
-            }
+            if ($user->role === 'medecin') {
+                return redirect()->route('accueilM'); 
+          
+    
+        } else {
+            return redirect()->back()->with('error', 'Mot de passe ou email incorrect');
+        }
         
     }
-}
-
-       
-
-    
-          
-        
-    
+    }
 
     public function logoutUser(){
 
         Auth::logout();
+
         return redirect()->route('main');
 
     }
 
 }
-
 

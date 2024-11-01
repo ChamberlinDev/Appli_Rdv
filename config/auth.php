@@ -40,6 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'patient' => [
+            'driver' => 'session',
+            'provider' => 'patients',
+        ],
+        'medecin' => [
+            'driver' => 'session',
+            'provider' => 'medecins',
+        ],
+        
     ],
 
     /*

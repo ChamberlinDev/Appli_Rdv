@@ -1,5 +1,3 @@
-@include('partials.navbar')
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,11 +30,11 @@
 
             <div class="mb-3">
                 <label for="email" class="form-label">Adresse email</label>
-                <input type="email" name="email" class="form-control form-control-sm" placeholder="Entrer votre email" required>
+                <input type="email" name="email" class="form-control form-control-sm" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Mot de passe</label>
-                <input type="password" name="password" class="form-control form-control-sm" placeholder="Entrer votre mot de passe ">
+                <input type="password" name="password" class="form-control form-control-sm" required>
             </div>
             <button type="submit" class="btn btn-primary">Se connecter</button>
             <div class="text-center">
@@ -60,4 +58,3 @@
 </body>
 
 </html>
-@include('partials.footer')

@@ -8,18 +8,19 @@ use Illuminate\Http\Request;
 class AccueilController extends Controller
 {
     public function index(){
-        return view('main');
+        $users=User::paginate(25);
+        return view('main', compact('users'));
     }
-    public function indexPatient(){
-        // return view('accueilP');
+    // public function indexPatient(){
+    //     return view('accueilP');
 
-    }
+    // }
     public function indexMedecin(){
         // $users = User::paginate(10); 
-        // return view('accueilM', compact('users'));
+        return view('accueilM');
     }
     public function indexAdmin(){
         // $users = User::where('role', 'medecin')->paginate(10); 
-        // return view('accueilAd', compact('users'));
+        return view('accueilAd');
     }
 }

@@ -12,12 +12,11 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        @include('partials.navbar')
+        @include('interfaceA.navbar')
 
-        <!-- Header-->
-       @include('partials.header')
+       
 
-       @include('partials.layout')
+       @include('interfaceA.slidebar')
 
         <!-- Footer-->
      @include('partials.footer')
