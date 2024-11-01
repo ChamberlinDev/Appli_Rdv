@@ -14,5 +14,6 @@ class Rendez_vous extends Model
         'Date',
         'Heure',
         'nom_medecin',
+        'specialite',
     ];
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('date');
             $table->time('heure');
             $table->string('nom_medecin');
+            $table->string('specialite');
             $table->timestamps();
         });
     }

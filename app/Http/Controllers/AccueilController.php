@@ -23,4 +23,8 @@ class AccueilController extends Controller
         // $users = User::where('role', 'medecin')->paginate(10); 
         return view('accueilAd');
     }
+
+    public function indexRdv(){
+        return view('rendez-vous.rdv');
+    }
 }

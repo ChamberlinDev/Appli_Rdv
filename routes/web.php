@@ -26,3 +26,4 @@ Route::post('/login_save', [AuthController::class, 'login'])->name('login_save')
 // deconnexion
 Route::get('/logout-user', [AuthController::class, 'logoutUser'])->name('logoutUser');
 
+Route::get('/rdv',[AccueilController::class,'indexRdv'])->name('rdv');

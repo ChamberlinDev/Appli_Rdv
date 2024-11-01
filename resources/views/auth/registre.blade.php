@@ -1,4 +1,5 @@
 @extends('partials.footer')
+@extends('partials.navbar')
 <!DOCTYPE html>
 <html lang="en">
 <head>

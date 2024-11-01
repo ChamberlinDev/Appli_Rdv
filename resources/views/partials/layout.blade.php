@@ -17,6 +17,43 @@
                             <a class="btn btn-primary" href="#">Rechercher</a>
                         </form>
                     </div>
+                    
+                </div>
+                <hr>
+                @php
+                $ide=1;
+                 @endphp
+            @foreach($users as $user)
+                    <div class="card">
+                      <h6>Nom: {{$user->nom}}</h6>
+                      <h6>prenom: {{$user->prenom}}</h6>
+                      <h6>email: {{$user->email}}</h6>
+                      <h6>telephone: {{$user->telephone}}</h6>
+                      <h6>role: {{$user->role}}</h6>
+                    </div>
+                    <a href="{{route('rdv')}}" class="btn btn-primary">Prendre rdv</a>
+                    <hr>
+             @php
+            $ide+=1;
+            @endphp
+           @endforeach
+            </div>
+        </section>
+        <section id="about">
+            <div class="container px-2 text-dark">
+                <div class="row gx-4 justify-content">
+             
+                   
+                </div>
+            </div>
+        </section>
+       
+        <section id="about">
+            <div class="container px-4 text-dark">
+                <div class="row gx-4 justify-content-center">
+                    <div>
+
+                    </div>
                 </div>
             </div>
         </section>
