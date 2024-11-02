@@ -9,7 +9,7 @@ class AccueilController extends Controller
 {
     public function index(){
         $users=User::paginate(25);
-        return view('main', compact('users'));
+        return view('welcome', compact('users'));
     }
     // public function indexPatient(){
     //     return view('accueilP');
@@ -25,6 +25,12 @@ class AccueilController extends Controller
     }
 
     public function indexRdv(){
-        return view('rendez-vous.rdv');
+        $users= User::paginate(25);
+        return view('rendez-vous.rdv', compact('users'));
+    }
+    public function rdvView($id){
+        $users=User::find($id);
+        return view('rendez-vous.rdvp', compact('users'));
+        
     }
 }

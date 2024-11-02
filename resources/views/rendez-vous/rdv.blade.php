@@ -14,7 +14,6 @@
         @csrf
        <div class="text-center text-primary"><h3>Prendre rendez-vous</h3></div>  
     
-            
             <div class="mb-3">
                 <label for="nom_patient" class="form-label">Nom du patient</label>
                 <input type="text" name="nom_patient" class="form-control form-control-sm"  >
@@ -46,33 +45,14 @@
             </div>
             <div class="mb-3">
                 <label for="nom_medecin" class="form-label">Nom du medecin</label>
-                <select name="nom_medecin" class="form-control form-control-sm">
-                <option value="" disabled selected>Choix du medecin?</option>
-                    <option value="">#</option>
-                </select>
-                @error('nom_medecin')
-                <span class="text-danger">{{$message}}</span>
-                @enderror
+                <input type="text" name="nom_medecin" class="form-control form-control-sm" value="" >
+               
             </div>
            
-           
             <div class="mb-3">
-                <label for="specialite" class="form-label">Specialité</label>
-                <select name="specialite" class="form-control form-control-sm">
-                <option value="" disabled selected>Quel profil de medecin recherchez-vous?</option>
-                    <option value="generaliste">Generaliste</option>
-                    <option value="dentiste">Dentiste</option>
-                    <option value="ophtamologue">Ophtamologue</option>
-                    <option value="dermatologue">Dermatologue</option>
-                    <option value="chururgien">Chirurgien</option>
-                    <option value="gynecologue">Gynecologue</option>
-                    <option value="autres">Autres...</option>
-                  
-
-                </select>
-                @error('specialite')
-                <span class="text-danger">{{$message}}</span>
-                @enderror
+                <label for="specialite" class="form-label">Specialite</label>
+                <input type="text" name="specialite" class="form-control form-control-sm" value="" >
+               
             </div>
            
            

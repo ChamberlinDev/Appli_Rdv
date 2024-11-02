@@ -6,9 +6,11 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link text-active" href="#">Gerer mes Rdv</a></li>
+                        <li class="nav-item"><a class="nav-link text-active" href="#">Rendez-vous</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Medecins</a></li>
-                        <a class="btn btn-primary text-light" href="{{route('registreView')}}">Vous-êtes medecin? </a>
+                        <a class="btn btn-primary text-light" href="{{url('register')}}">Vous-êtes medecin? </a>
+                        <a class="btn btn-primary text-light" href="{{url('login')}}">login </a>
+
                     </ul>
                 </div>
             </div>
