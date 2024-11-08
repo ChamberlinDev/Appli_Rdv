@@ -52,7 +52,7 @@
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- Debut Contact -->
 							<ul class="top-link">
-								<li><a href="#">Doctors</a></li>
+								<!-- <li><a href="#">Doctors</a></li> -->
 								<li><a href="#">Contact</a></li>
 							</ul>
 							<!-- Fin Contact -->
@@ -91,7 +91,7 @@
 										<ul class="nav menu">
 											
 											<li class="active"><a href="/">Accueil</a></li>
-											<li><a href="partials.layout">Medecins</a></li>
+											<li><a href="#">  Rendez-vous </a></li>
 											<li><a href="contact.html"> Contact</a></li>
 										</ul>
 									</nav>
@@ -100,7 +100,7 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="{{route('login')}}" class="btn btn-primary">êtes-vous medecin?</a>
+									<a href="/" class="btn btn-danger">deconnexion</a>
 								</div>
 							</div>
 						</div>
@@ -108,8 +108,6 @@
 				</div>
 			</div>
 			<!--/ Fin Header  -->
-			
 		</header>
-		
       
       

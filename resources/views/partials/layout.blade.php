@@ -1,47 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <title>RdvMedical</title>
-</head>
-<body>
     <hr>
 <section id="about">
             <div class="container px-4 text-dark">
-                <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        <h4>Trouver un medecin</h4>
-                        <form class="d-flex align-items-center">
-                            <input type="text" name="nom" class="form-control form-control me-2" placeholder="spécialité, nom, adresse..." >
-                            <a class="btn btn-primary" href="#">Rechercher</a>
-                        </form>
-                    </div>
-                    
-                </div>
+               
                 <hr>
                 @php
                 $ide=1;
                 @endphp
-            @foreach($users as $user)
-            <div class="card col-8 d-flex align-items p-3">
-                 <i class="bi bi-person-circle fa-3x me-5"></i> 
-                 <div>
-                <h6 class="text-primary">{{$user->nom}} {{$user->prenom}}</h6>
-                <p>Email: {{$user->email}}</p>
-                <p>Téléphone: {{$user->telephone}}</p>
-                <p>Rôle: {{$user->role}}</p>
-                <a href="#" class="btn btn-primary">Prendre rdv</a>
-            </div>
-            </div>
-                    
-            <hr>
-             @php
-            $ide+=1;
-            @endphp
-           @endforeach
+             
             </div>
         </section>
         <section id="about">
@@ -53,24 +20,49 @@
             </div>
         </section>
        
-        <section id="about">
-            <div class="container px-4 text-dark">
-                <div class="row gx-4 justify-content-center">
-                    <div>
+       <!-- Start Why choose -->
+		
+		
+		<!-- Start Affichage Medecin -->
+	<section class="blog section" id="blog">
+    <div class="container">
+        
+						<div class="section-title">
+							<h2>Medecins</h2>
+							<!-- <img src="assets/img/section-img.png" alt="#"> -->
+						</div>
+        <div class="row">
+            @foreach($users as $user) 
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Affichage des médecins -->
+                    <div class="single-news">
+                     <!-- <p class="text-success">{{$user->statut}}</p> -->
+                    <div class="news-head d-flex justify-content-center align-items-center">
+                    <i class="bi bi-person-circle" style="font-size: 3rem;"></i>
+                        </div>
+                        <div  class="d-flex justify-content-center mt-4">
+                            <div class="news-content">
+                                <h5 class="text-primary text-center"><a href="#"></a>Dr. {{$user->name}}</h5>
+                                <p class="text-center"><a href="#"></a>{{$user->specialite}}</p>
+                                
+                                <a class="btn btn-primary text-light" href="{{ route('prendre-rdv', ['id' => $user->id, 'name' => $user->name, 'specialite' => $user->specialite]) }}">Prendre rdv</a>                            
+                            </div>
 
+                        </div>
+                        <hr>
                     </div>
+                    <!-- End Affichage des médecins -->
                 </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="container px-4 text-dark">
-                <div class="row gx-4 justify-content">
-                    <div class="card">
-                      <p></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-       
-</body>
-</html>
+                
+            @endforeach
+        </div>
+        <hr>
+    </div>
+</section>
+<!-- End Affichage Médecins -->
+
+		<!--/ End Why choose -->
+        @php
+            $ide+=1;
+            @endphp
+</section>         

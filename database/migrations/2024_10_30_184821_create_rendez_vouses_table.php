@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nom_patient');
             $table->string('telephone');
             $table->date('date');
-            $table->time('heure');
+            $table->time('heure')->unique();
             $table->string('nom_medecin');
             $table->string('specialite');
             $table->timestamps();

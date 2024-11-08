@@ -18,6 +18,10 @@ class AuthenticatedSessionController extends Controller
     {
         return view('auth.login');
     }
+    public function registre(){
+        return view('auth.register');
+    }
+    
 
     /**
      * Handle an incoming authentication request.

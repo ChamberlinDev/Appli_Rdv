@@ -1,16 +1,9 @@
-@extends('partials.navbar')
+@include('partials.header')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <form class="form-control w-50" action="#" method="post" >
+        <form class="form-control w-50" action="{{ route('valider-rdv') }}" method="post" >
         @csrf
        <div class="text-center text-primary"><h3>Prendre rendez-vous</h3></div>  
     
@@ -44,26 +37,24 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="nom_medecin" class="form-label">Nom du medecin</label>
-                <input type="text" name="nom_medecin" class="form-control form-control-sm" value="" >
-               
-            </div>
+            <label for="nom_medecin" class="form-label">Nom du médecin</label>
+            <input type="text" name="nom_medecin" class="form-control form-control-sm" value="{{ $name }}" readonly>
+        </div>
            
-            <div class="mb-3">
-                <label for="specialite" class="form-label">Specialite</label>
-                <input type="text" name="specialite" class="form-control form-control-sm" value="" >
-               
-            </div>
+        <div class="mb-3">
+            <label for="specialite" class="form-label">Spécialité</label>
+            <input type="text" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
+        </div>
+        
+
            
            
-            <a href="#" class="btn btn-success">Valider</a>
-            <a href="{{route('main')}}" class="btn btn-danger">Annuler</a>
+        <button type="submit" class="btn btn-success">Valider</button>
+        <a href="{{route('welcome')}}" class="btn btn-danger">Annuler</a>
 
             </form> 
     </div>
-</body>
-</html>
-
+@include('partials.footer')
 
 
 

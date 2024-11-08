@@ -31,12 +31,17 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
+            'numero_medecin' => ['required', 'string', 'max:255'],
+            'specialite' => ['required', 'string', 'max:255'],
+            // 'statut'=>['required'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
             'name' => $request->name,
+            'numero_medecin'=> $request->numero_medecin,
+            'specialite'=> $request->specialite,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -47,4 +52,5 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+    
 }

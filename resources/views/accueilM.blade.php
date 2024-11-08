@@ -12,12 +12,7 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        @include('interfaceM.navbar')
-
-        @include('interfaceM.header')
-
-       @include('interfaceM.layout')
-
+       
         <!-- Footer-->
      @include('partials.footer')
         <!-- Bootstrap core JS-->
