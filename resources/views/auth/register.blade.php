@@ -67,8 +67,8 @@
         </div>
         <!-- Numero_medecin-->
         <div class="mt-2">
-            <x-input-label for="numero_medecin" :value="__('Numero de medecin')" class="text-primary" />
-            <x-text-input id="numero_medecin" class="block mt-1 w-full" type="text" name="numero_medecin" :value="old('numero_medecin')" required autofocus autocomplete="numero_medecin" />
+            <x-input-label for="code_etablissement" :value="__('Code etablissement')" class="text-primary" />
+            <x-text-input id="code_etablissement" class="block mt-1 w-full" type="text" name="code_etablissement" :value="old('code_etablissement')" required autofocus autocomplete="code_etablissement" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 

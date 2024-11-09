@@ -52,7 +52,7 @@
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- Debut Contact -->
 							<ul class="top-link">
-								<li><a href="#">Doctors</a></li>
+								<li><a href="{{route('medecin')}}">Doctors</a></li>
 								<li><a href="#">Contact</a></li>
 							</ul>
 							<!-- Fin Contact -->
@@ -90,9 +90,9 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											
-											<li class="active"><a href="/">Accueil</a></li>
-											<li><a href="partials.layout">Medecins</a></li>
-											<li><a href="contact.html"> Contact</a></li>
+											<li><a href="/">Accueil</a></li>
+											<li><a href="{{route('medecin')}}">Medecins</a></li>
+											<li><a href="{{route('medecin')}}"> Prendre rendez-vous</a></li>
 										</ul>
 									</nav>
 								</div>

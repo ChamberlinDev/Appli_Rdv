@@ -31,4 +31,6 @@ class MedecinController extends Controller
     return view('medecins.profile', compact('users'));
 }
 
+
+
 }

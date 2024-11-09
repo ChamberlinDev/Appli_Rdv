@@ -29,7 +29,9 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/prendre-rdv/{id}/{name}/{specialite}', [PatientController::class, 'create'])->name('prendre-rdv');
+Route::get('medecin', [AccueilController::class,'Medecin'])->name('medecin');
+
+Route::get('/prendre-rdv/{id}/{name}/{specialite}', [PatientController::class, 'rdv'])->name('prendre-rdv');
 Route::post('/valider-rdv', [PatientController::class, 'valider_rdv'])->name('valider-rdv');
 
 

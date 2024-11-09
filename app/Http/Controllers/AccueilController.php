@@ -19,11 +19,13 @@ class AccueilController extends Controller
 //     return view('welcome', compact('users'));
 // }
   
-    public function indexMedecin(){
-        // $users = User::paginate(10); 
-        return view('accueilM');
+    public function Medecin(){
+         $users = User::paginate(10); 
+        return view('medecins.listeM', compact('users'));
     }
-   
+
+    
+
    
    
 }
