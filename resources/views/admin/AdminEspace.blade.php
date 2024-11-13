@@ -45,30 +45,6 @@
     </head>
     <body>
 <header class="header" >
-			<!-- Debut Topbar -->
-			<div class="topbar">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-5 col-12">
-							<!-- Debut Contact -->
-							<ul class="top-link">
-								<!-- <li><a href="#">Doctors</a></li> -->
-								<li><a href="#">Contact</a></li>
-							</ul>
-							<!-- Fin Contact -->
-						</div>
-						<div class="col-lg-6 col-md-7 col-12">
-							<!-- Top Contact -->
-							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+221 33 802 50 96</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:yannnzaba@gmail.com">himalayasommet@gmail.com</a></li>
-							</ul>
-							<!-- Fin Top Contact -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Fin Topbar -->
 			<!-- Debut Header Inner -->
 			<div class="header-inner">
 				<div class="container">
@@ -77,7 +53,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Debut Logo -->
 								<div class="logo">
-									<a href="/"><img src="assets/img/Medical Care2.png" alt="#"></a>
+									<a href="{{route('AdminEspace')}}"><img src="assets/img/Medical Care2.png" alt="#"></a>
 								</div>
 								<!-- Fin Logo -->
 								<!-- Debut Mobile Nav -->
@@ -89,10 +65,9 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											
-											<li class="active"><a href="/">Accueil</a></li>
-											<li><a href="#">  Rendez-vous </a></li>
-											<li><a href="contact.html"> Contact</a></li>
+											<li><a href="{{route('AdminEspace')}}">Accueil</a></li>
+											<li><a href="#">Liste des medecins</a></li>
+											<li><a href="#"> Historiques rendez-vous</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -100,14 +75,34 @@
 							</div>
 							<div class="col-lg-2 col-12">
 								<div class="get-quote">
-									<a href="/" class="btn btn-danger">deconnexion</a>
+									<a href="{{route('welcome')}}" class="btn btn-danger text-red">Deconnexion</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!--/ Fin Header  -->
-		</header>
-      
-      
+			</div>		
+</header>
+<section class="slider">
+			<div class="hero-slider">
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('assets/img/doc7.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Bienvenu(e) sur <span>Rencard_Med</span><span> Vous trouverez des specialistes </span></h1>
+									<h4>Vous pouvez prendre rendez-vous depuis chez vous via cette plateforme! </h4>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+		</section>
+		<!--/ Fin Slider -->
+@include('admin.listeMed')
+@include('admin.listerdv')
+
+	

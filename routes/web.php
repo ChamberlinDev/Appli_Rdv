@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\PersonneController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\MedecinController;
 use App\Http\Controllers\PatientController;
@@ -37,3 +38,10 @@ Route::post('/valider-rdv', [PatientController::class, 'valider_rdv'])->name('va
 
 Route::get('/recherche-medecin', [MedecinController::class, 'search'])->name('medecins.search');
 Route::get('/medecin/{id}', [MedecinController::class, 'show'])->name('medecin.profile');
+
+Route::get('registerAd', [PersonneController::class, 'showRegistrationForm'])->name('registerView');
+Route::post('registerAdmin', [PersonneController::class, 'registerA'])->name('registerAdmin');
+Route::get('loginAd', [PersonneController::class, 'showLoginForm'])->name('loginView');
+Route::post('loginAdmin', [PersonneController::class, 'loginA'])->name('loginAd');
+Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA');
+Route::get('Admin', [AccueilController::class,'AdminEspace'])->name('AdminEspace');

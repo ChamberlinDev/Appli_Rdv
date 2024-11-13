@@ -12,7 +12,7 @@
                     </a>
                 </div> -->
                 <div class="logo">
-				<a href="/"><img src="assets/img/Medical Care2.png" alt="#"></a>
+				<a href="{{route('dashboard')}}"><img src="assets/img/Medical Care2.png" alt="#"></a>
 				</div>
 
                 <!-- Navigation Links -->

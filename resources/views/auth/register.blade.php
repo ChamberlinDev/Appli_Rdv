@@ -78,18 +78,8 @@
             <x-text-input id="specialite" class="block mt-1 w-full" type="text" name="specialite" :value="old('specialite')" required autofocus autocomplete="specialite" />
             <x-input-error :messages="$errors->get('specialite')" class="mt-2" />
         </div>
-         <!-- Disponibilité -->
-         <!-- <div class="mt-2">
-            <x-input-label for="statut" :value="__('Disponibilité')" class="text-primary" />
-            
-            <select id="statut" name="statut" class="block mt-1 w-full" required autofocus autocomplete="statut">
-                <option value="disponible" {{ old('statut') == 'disponible' ? 'selected' : '' }}>Disponible</option>
-                <option value="pas_disponible" {{ old('statut') == 'pas_disponible' ? 'selected' : '' }}>Pas Disponible</option>
-            </select>
-
-            <x-input-error :messages="$errors->get('statut')" class="mt-2" />
-        </div> -->
-
+        
+        
 
         <!-- Email Address -->
         <div class="mt-2">

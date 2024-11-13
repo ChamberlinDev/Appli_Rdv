@@ -94,7 +94,7 @@
             @endif
 
             <x-primary-button class="ms-3">
-                {{ __('Log in') }}
+                {{ __('Se connecter') }}
             </x-primary-button>
         </div>
     </form>

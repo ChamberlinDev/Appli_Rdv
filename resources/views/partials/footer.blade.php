@@ -11,6 +11,7 @@
 						</div>
 					</div>
 				</div>
+				<a class="btn" href="{{route('loginView')}}">Admin Espace</a>
 			</div>
 			<!--/ End Copyright -->
 		</footer>

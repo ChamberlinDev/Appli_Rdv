@@ -61,7 +61,7 @@
 							<!-- Top Contact -->
 							<ul class="top-contact">
 								<li><i class="fa fa-phone"></i>+221 33 802 50 96</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:yannnzaba@gmail.com">himalayasommet@gmail.com</a></li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:rencardmedical1@gmail.com">rencardmedical1@gmail.com</a></li>
 							</ul>
 							<!-- Fin Top Contact -->
 						</div>

@@ -48,6 +48,10 @@ return [
             'driver' => 'session',
             'provider' => 'medecins',
         ],
+        'personne' => [
+            'driver' => 'session',
+            'provider' => 'personnes',
+        ],
         
     ],
 
@@ -72,7 +76,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+         
         ],
+        // ajouter
+
+         'personnes' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Personne::class,
+    ],
 
         // 'users' => [
         //     'driver' => 'database',

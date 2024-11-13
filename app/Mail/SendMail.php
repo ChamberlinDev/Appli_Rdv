@@ -2,52 +2,43 @@
 
 namespace App\Mail;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class SendMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use SerializesModels;
+
+    // Propriétés pour recevoir les données du rendez-vous
+    public $rdv;
 
     /**
      * Create a new message instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the message envelope.
-     */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            subject: 'Send Mail',
-        );
-    }
-
-    /**
-     * Get the message content definition.
-     */
-    public function content(): Content
-    {
-        return new Content(
-            view: 'view.name',
-        );
-    }
-
-    /**
-     * Get the attachments for the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @param  array  $rdv
+     * @return void
      */
-    public function attachments(): array
+    public function __construct($rdv)
     {
-        return [];
+        $this->rdv = $rdv;  // Stocke les informations du rendez-vous
+    }
+
+    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this->subject('Nouvelle demande de Rendez-vous')
+                    ->view('emails.rdv')  // Vue d'email pour afficher les informations
+                    ->with([
+                        'nom_patient' => $this->rdv['nom_patient'],
+                        'telephone' => $this->rdv['telephone'],
+                        'date' => $this->rdv['date'],
+                        'heure' => $this->rdv['heure'],
+                        'nom_medecin' => $this->rdv['nom_medecin'],
+                        'specialite' => $this->rdv['specialite'],
+                    ]);
     }
 }

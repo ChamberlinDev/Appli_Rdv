@@ -67,3 +67,4 @@
             $ide+=1;
             @endphp
 </section>         
+@include('partials.footer')

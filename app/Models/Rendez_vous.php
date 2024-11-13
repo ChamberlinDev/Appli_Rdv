@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Rendez_vous extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
     protected $fillable = [
         'nom_patient',
         'telephone',
@@ -15,5 +16,7 @@ class Rendez_vous extends Model
         'heure',
         'nom_medecin',
         'specialite',
+        'email_medecin',
+        
     ];
 }

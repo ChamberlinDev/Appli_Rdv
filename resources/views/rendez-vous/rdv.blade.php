@@ -2,6 +2,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 								
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+    
         <form class="form-control w-50" action="{{ route('valider-rdv') }}" method="post" >
         @csrf
        <div class="text-center text-primary"><h3>Prendre rendez-vous</h3></div>  
@@ -45,9 +46,13 @@
             <input type="text" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
         </div>
 
+        <div class="mb-3">
+            <label for="email_medecin" class="form-label">Email du médecin</label>
+            <input type="text" name="email_medecin" class="form-control form-control-sm" value="{{ $email }}" readonly>
+        </div>
            
            
-            <a href="#" class="btn btn-success">Valider</a>
+            <button type="submit" class="btn btn-success">Valider</button>
             <a href="{{route('welcome')}}" class="btn btn-danger">Annuler</a>
 
             </form> 
