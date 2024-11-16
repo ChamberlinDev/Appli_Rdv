@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RefusRdvMail;
+use App\Mail\AcceptRdvMail;
 use App\Mail\SendMail;
 use App\Models\Rendez_vous;
 use App\Models\User;
@@ -20,7 +22,8 @@ class PatientController extends Controller
             'id' => $id,
             'name' => $name,
             'specialite' => $specialite,
-            'email' => $rdv ? $rdv->email : null // Si trouvé, récupérer l'email
+            'email' => $rdv ? $rdv->email : null,
+            'nom_etablissement' => $rdv ? $rdv->nom_etablissement : null 
         ]);
     }
    
@@ -29,23 +32,58 @@ class PatientController extends Controller
         // Validation des données du formulaire
         $rdv = $request->validate([
             'nom_patient' => 'required|string|max:255',
-            'telephone' => 'required|string|max:15',
+            'telephone' => 'required|string|max:9',
             'date' => 'required|date',
             'heure' => 'required|date_format:H:i',
             'nom_medecin' => 'required|string|max:255',
             'specialite' => 'required|string|max:255',
+            'email_patient' => 'required|email',
             'email_medecin' => 'required|email',
+            'nom_etablissement' => 'required|string',
         ]);
     
-        // Créer un rendez-vous dans la base de données
         Rendez_Vous::create($rdv);
     
         // Envoyer l'email au médecin
         Mail::to($rdv['email_medecin'])->send(new SendMail($rdv));
     
-        // Rediriger avec un message de succès
         return redirect()->route('welcome')->with('success', 'Rendez-vous pris avec succès !');
     }
+     // Méthode pour accepter un rendez-vous
+     public function accepterRdv($id)
+     {
+         $rdv = Rendez_vous::find($id);
+         if ($rdv) {
+             $rdv->statut = 'accepté';
+             $rdv->save();
+ 
+             // Envoi de l'email au patient pour confirmer l'acceptation
+             Mail::to($rdv->email_patient)->send(new AcceptRdvMail($rdv));
+ 
+             return redirect()->route('dashboard')->with('success', 'Rendez-vous accepté !');
+         }
+ 
+         return redirect()->route('dashboard')->with('error', 'Rendez-vous non trouvé.');
+     }
+ 
+     // Méthode pour refuser un rendez-vous
+     public function refuserRdv(Request $request, $id)
+     {
+         $rdv = Rendez_vous::find($id);
+         if ($rdv) {
+             // Mettre à jour le statut du rendez-vous
+             $rdv->statut = 'refusé';
+             $rdv->email_patient = $request->email_patient;  // Email du patient en cas de refus
+             $rdv->save();
+ 
+             // Envoyer un email de refus au patient
+             Mail::to($rdv->email_patient)->send(new RefusRdvMail($rdv));
+ 
+             return redirect()->route('dashboard')->with('error', 'Rendez-vous refusé.');
+         }
+ 
+         return redirect()->route('dashboard')->with('error', 'Rendez-vous non trouvé.');
+     }
    
     public function indexMedecin()
     {
@@ -59,5 +97,6 @@ class PatientController extends Controller
         return view('dashboard', compact('appointments', 'user'));
     }
    
+
 
 }

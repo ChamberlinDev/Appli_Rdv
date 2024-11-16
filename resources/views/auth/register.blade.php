@@ -65,11 +65,17 @@
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
-        <!-- Numero_medecin-->
+        <!-- code_hopital-->
         <div class="mt-2">
             <x-input-label for="code_etablissement" :value="__('Code etablissement')" class="text-primary" />
             <x-text-input id="code_etablissement" class="block mt-1 w-full" type="text" name="code_etablissement" :value="old('code_etablissement')" required autofocus autocomplete="code_etablissement" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <x-input-error :messages="$errors->get('code_etablissement')" class="mt-2" />
+        </div>
+         <!-- nom_hopital-->
+         <div class="mt-2">
+            <x-input-label for="nom_etablissement" :value="__('Nom etablissement')" class="text-primary" />
+            <x-text-input id="nom_etablissement" class="block mt-1 w-full" type="text" name="nom_etablissement" :value="old('nom_etablissement')" required autofocus autocomplete="nom_etablissement" />
+            <x-input-error :messages="$errors->get('nom_etablissement')" class="mt-2" />
         </div>
 
          <!-- Specialite -->

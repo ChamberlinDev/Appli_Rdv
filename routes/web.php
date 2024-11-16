@@ -45,3 +45,10 @@ Route::get('loginAd', [PersonneController::class, 'showLoginForm'])->name('login
 Route::post('loginAdmin', [PersonneController::class, 'loginA'])->name('loginAd');
 Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA');
 Route::get('Admin', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
+
+
+// Route pour accepter un rendez-vous
+Route::get('/rdv/accepter/{id}', [PatientController::class, 'accepterRdv'])->name('accepter.rdv');
+
+// Route pour refuser un rendez-vous
+Route::post('/rdv/refuser/{id}', [PatientController::class, 'refuserRdv'])->name('refuser.rdv');

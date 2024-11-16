@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('code_etablissement')->unique();
+            $table->string('nom_etablissement');
             $table->string('specialite');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

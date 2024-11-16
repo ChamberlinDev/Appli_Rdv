@@ -167,8 +167,8 @@
 						<div class="single-fun">
 							<i class="icofont icofont-home"></i>
 							<div class="content">
-								<span class="counter">0</span>
-								<p>Localisation</p>
+								<span class="counter">{{ $hospitalsCount }}</span>
+								<p>Hopitaux</p>
 							</div>
 						</div>
 						<!-- End localisation -->
@@ -178,8 +178,8 @@
 						<div class="single-fun">
 							<i class="icofont icofont-user-alt-3"></i>
 							<div class="content">
-								<span class="counter">0</span>
-								<p>Nombres Docteurs</p>
+								<span class="counter">{{ $doctorsCount }}</span>
+								<p>Medecins</p>
 							</div>
 						</div>
 						<!-- End nombre docteur -->
@@ -189,8 +189,8 @@
 						<div class="single-fun">
 							<i class="icofont-simple-smile"></i>
 							<div class="content">
-								<span class="counter">0</span>
-								<p>Nombres de rdv</p>
+								<span class="counter">{{ $appointmentsCount }}</span>
+								<p>Rendez-vous</p>
 							</div>
 						</div>
 						<!-- End nombre rdv-->
@@ -200,7 +200,7 @@
 						<div class="single-fun">
 							<i class="icofont icofont-table"></i>
 							<div class="content">
-								<span class="counter">0</span>
+								<p class="counter">starting</p>
 								<p>Année d'experience</p>
 							</div>
 						</div>

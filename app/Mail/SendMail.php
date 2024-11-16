@@ -30,7 +30,8 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Nouvelle demande de Rendez-vous')
+        return $this->from('rdvmedicalapp@gmail.com', 'Rencard_Med')  
+                    ->subject('Nouvelle demande de Rendez-vous')
                     ->view('emails.rdv')  // Vue d'email pour afficher les informations
                     ->with([
                         'nom_patient' => $this->rdv['nom_patient'],

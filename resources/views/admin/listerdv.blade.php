@@ -17,6 +17,8 @@
       <th>Nom_medecin</th>
       <th>Specialite</th>
       <th>Email_medecin</th>
+      <th>Email_patient</th>
+      <th>Statut</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +33,8 @@
         <td>{{ $rdv->nom_medecin }}</td>
         <td>{{ $rdv->specialite }}</td>
         <td>{{ $rdv->email_medecin }}</td>
+        <td>{{ $rdv->email_patient }}</td>
+        <td>{{ $rdv->staut }}</td>
       </tr>
       <!-- Incrémentation de la variable $ide après chaque itération -->
       @php

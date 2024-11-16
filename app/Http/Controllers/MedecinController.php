@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MedecinController extends Controller
 {
-    //
+    // fonction recherche d une specialité
     public function search(Request $request)
 {
     $specialite = $request->input('specialite');

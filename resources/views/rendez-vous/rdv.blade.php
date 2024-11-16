@@ -1,4 +1,4 @@
-<a class="btn btn-primary" href="/" type="submit">Retour</a>
+<a class="btn" href="/" type="submit"><<<-precendent</a>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 								
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
@@ -19,6 +19,13 @@
                 <label for="telephone" class="form-label">Telephone</label>
                 <input type="text" name="telephone" class="form-control form-control-sm"  >
                 @error('telephone')
+                <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="email_patient" class="form-label">Adresse email</label>
+                <input type="text" name="email_patient" class="form-control form-control-sm"  >
+                @error('email_patient')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
@@ -47,8 +54,10 @@
         </div>
 
         <div class="mb-3">
-            <label for="email_medecin" class="form-label">Email du médecin</label>
-            <input type="text" name="email_medecin" class="form-control form-control-sm" value="{{ $email }}" readonly>
+            <input type="hidden" name="email_medecin" value="{{ $email }}">
+        </div>
+        <div class="mb-3">
+            <input type="text" name="nom_etablissement" value="{{ $nom_etablissement }}" readonly>
         </div>
            
            
@@ -57,7 +66,6 @@
 
             </form> 
     </div>
-@include('partials.footer')
 
 
 

@@ -19,7 +19,10 @@ return new class extends Migration
             $table->time('heure')->unique();
             $table->string('nom_medecin');
             $table->string('specialite');
+            $table->enum('statut', ['en attente', 'accepté', 'refusé'])->default('en attente');
+            $table->string('email_patient')->nullable(); 
             $table->string('email_medecin');
+            $table->string('nom_etablissement');
             $table->timestamps();
         });
     }

@@ -12,10 +12,13 @@ class Rendez_vous extends Model
     protected $fillable = [
         'nom_patient',
         'telephone',
+        'email_patient',
         'date',
         'heure',
         'nom_medecin',
+        'nom_etablissement',
         'specialite',
+        'statut',
         'email_medecin',
         
     ];

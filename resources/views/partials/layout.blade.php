@@ -43,7 +43,9 @@
                         <div  class="d-flex justify-content-center mt-4">
                             <div class="news-content">
                                 <h5 class="text-primary text-center"><a href="#"></a>Dr. {{$user->name}}</h5>
-                                <p class="text-center"><a href="#"></a>{{$user->specialite}}</p>
+                                <p class="text-center text-success"><a href="#"></a>{{$user->specialite}}</p>
+                                <p class="text-center text-secondary"><a href="#"></a>{{$user->nom_etablissement}}</p>
+
                                 
                                 <a class="btn btn-primary text-light" href="{{ route('prendre-rdv', ['id' => $user->id, 'name' => $user->name, 'specialite' => $user->specialite]) }}">Prendre rdv</a>                            
                             </div>
