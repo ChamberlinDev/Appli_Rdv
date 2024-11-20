@@ -1,10 +1,11 @@
+
 <hr>
 <!-- rdv liste -->
 @php
     $ide = 1;
 @endphp
+<h4 class="text-center text-primary">Historique de rendez-vous</h4>
 
-<h4 class="text-center text-primary">Historique des rendez-vous</h4>
 <div class="row">
 <table class="table text-dark">
   <thead>
@@ -34,7 +35,7 @@
         <td>{{ $rdv->specialite }}</td>
         <td>{{ $rdv->email_medecin }}</td>
         <td>{{ $rdv->email_patient }}</td>
-        <td>{{ $rdv->staut }}</td>
+        <td>{{ $rdv->statut }}</td>
       </tr>
       <!-- Incrémentation de la variable $ide après chaque itération -->
       @php

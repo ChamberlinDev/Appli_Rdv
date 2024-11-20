@@ -26,6 +26,7 @@ class RefusRdvMail extends Mailable
             ->with([
                 'nom_patient' => $this->rdv->nom_patient,
                 'nom_medecin'=>$this->rdv->nom_medecin,
+                'raison_refus'=>$this->rdv->raison_refus,
                 'message' => "Nous sommes désolés, mais votre rendez-vous a été refusé par le médecin.",
             ]);
     }

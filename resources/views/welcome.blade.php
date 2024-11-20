@@ -153,11 +153,48 @@
 		<hr>
 		<!--/Ens clients-->
 		
-		<!-- Start statistics -->
-		<div class="section-title">
+		
+				
+		
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>A propos de nous</h2>
+							<p>-------------------</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>C'est quoi Rencard_Med</h3>
+							<p>Rencard_Med est une plateforme de prise de rendez-vous medical entre un patient et un medecin de n'importe quelle hopital du senegal </p>
+							<p>Ceci facilite l'operation de rendez-vous pour les administration des etablissements de sante car un patient depuis chez lui peut prendre
+							 rendez-vous avec un medecin de son choix selon de la specialité voulu. A noter tout actions sur la plateforme est suvie et tracable.</p>
+							
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-3 col-md-3 col-12">
+								<!-- Debut Logo -->
+						<div class="logo">
+							<a href="/"><img src="assets/img/Medical Care2.png" alt="#"></a>
+							</div>
+								<!-- Fin Logo -->
+								<!-- Debut Mobile Nav -->
+								<!-- Fin Mobile Nav -->
+					</div>
+				</div>
+			</div>
+		</section>
+<hr>
+<!-- Start statistics -->
+<div class="section-title">
 			<h2>Statistiques</h2>
 		</div>
-				
 		<!-- chiffres -->
 		<div id="fun-facts" class="fun-facts section overlay">
 			<div class="container">
@@ -210,6 +247,5 @@
 			</div>
 		</div>
 		<!--/ End chiffres -->
-		
-		
+		<hr>
 	@include('partials.footer')

@@ -17,23 +17,32 @@ class AccueilController extends Controller
         // Passer ces valeurs à la vue
         return view('welcome', compact( 'users','hospitalsCount', 'doctorsCount', 'appointmentsCount'));
     }
-//     public function compteur()
-// {
-   
-//     $users = User::count();
-
-//     return view('welcome', compact('users'));
-// }
   
     public function Medecin(){
          $users = User::paginate(10); 
         return view('medecins.listeM', compact('users'));
     }
     public function AdminEspace(){
+        $hospitalsCount = User::whereNotNull('nom_etablissement')->where('nom_etablissement', '!=', '')->count();
+        $doctorsCount = User::count();  
+        $appointmentsCount = Rendez_vous::count();
         $users = User::paginate(10);
         $appointments = Rendez_vous::paginate(10); 
-        return view('admin.AdminEspace', compact('users', 'appointments'));
+        return view('admin.AdminEspace', compact('users', 'appointments','hospitalsCount', 'doctorsCount', 'appointmentsCount'));
     }
+ 
+
+public function deleteUser($id)
+{
+    // Trouver l'utilisateur par son ID
+    $user = User::findOrFail($id);
+
+    // Supprimer l'utilisateur
+    $user->delete();
+
+    // Rediriger avec un message de succès
+    return redirect()->route('/AdminEspace')->with('success', 'Utilisateur supprimé avec succès.');
+}
 
     
 

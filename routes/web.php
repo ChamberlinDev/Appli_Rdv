@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AccueilController;
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\PersonneController;
 use App\Http\Controllers\Auth\RegisteredUserController;
@@ -42,13 +43,16 @@ Route::get('/medecin/{id}', [MedecinController::class, 'show'])->name('medecin.p
 Route::get('registerAd', [PersonneController::class, 'showRegistrationForm'])->name('registerView');
 Route::post('registerAdmin', [PersonneController::class, 'registerA'])->name('registerAdmin');
 Route::get('loginAd', [PersonneController::class, 'showLoginForm'])->name('loginView');
-Route::post('loginAdmin', [PersonneController::class, 'loginA'])->name('loginAd');
+Route::post('/loginAdmin', [PersonneController::class, 'loginA'])->name('loginAd');
 Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA');
 Route::get('Admin', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
 
 
 // Route pour accepter un rendez-vous
 Route::get('/rdv/accepter/{id}', [PatientController::class, 'accepterRdv'])->name('accepter.rdv');
-
 // Route pour refuser un rendez-vous
 Route::post('/rdv/refuser/{id}', [PatientController::class, 'refuserRdv'])->name('refuser.rdv');
+//reporter un rdv
+Route::post('/rdv/reporter/{id}', [PatientController::class, 'reporter'])->name('reporter.rdv');
+
+Route::get('/admin/delete/{id}', [AccueilController::class, 'deleteUser'])->name('admin.delete');

@@ -81,7 +81,6 @@
 								</div>
 								<!-- Fin Logo -->
 								<!-- Debut Mobile Nav -->
-								<div class="mobile-nav"></div>
 								<!-- Fin Mobile Nav -->
 							</div>
 							<div class="col-lg-7 col-md-9 col-12">

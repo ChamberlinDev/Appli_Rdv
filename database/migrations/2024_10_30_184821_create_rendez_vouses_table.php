@@ -18,8 +18,11 @@ return new class extends Migration
             $table->date('date');
             $table->time('heure')->unique();
             $table->string('nom_medecin');
-            $table->string('specialite');
-            $table->enum('statut', ['en attente', 'accepté', 'refusé'])->default('en attente');
+            $table->string('specialite'); 
+            $table->date('date_report')->nullable();
+            $table->time('heure_report')->nullable();
+            $table->string('raison_refus')->nullable(); // Raison d'annulation (pour refus)
+            $table->enum('statut', ['en attente', 'accepté', 'refusé','reporté'])->default('en attente');
             $table->string('email_patient')->nullable(); 
             $table->string('email_medecin');
             $table->string('nom_etablissement');

@@ -93,8 +93,11 @@
                                     <h5 class="text-primary text-center">
                                         <a href="#">Dr. {{ $user->name }}</a>
                                     </h5>
-                                    <p class="text-center">
+                                    <p class="text-center text-success">
                                         <a href="#">{{ $user->specialite }}</a>
+                                    </p>
+                                    <p class="text-center">
+                                        <a href="#">{{ $user->nom_etablissement }}</a>
                                     </p>
 
                                     <a class="btn btn-primary text-light" 

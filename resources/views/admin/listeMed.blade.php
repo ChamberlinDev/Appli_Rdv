@@ -8,15 +8,16 @@
 
 <h4 class="text-center text-primary">Listes des medecins</h4>
 <hr>
-<a class="text-primary" href="#">Gerer</a>
+<!-- <a class="text-primary" href="#">Gerer</a> -->
 <hr>
 <div class="row">
 <table class="table text-dark">
   <thead>
     <tr>
     <th>Id</th>
-      <th>Nom</th>
+      <th>Nom du medecin</th>
       <th>Code etablissement</th>
+      <th>Nom etablissement</th>
       <th>Specialite</th>
       <th>Email</th>
       <th>Actions</th>
@@ -30,11 +31,13 @@
       <td>{{$user->id}}</td>
       <td>{{$user->name}}</td>
       <td>{{$user->code_etablissement}}</td>
+      <td>{{$user->nom_etablissement}}</td>
       <td>{{$user->specialite}}</td>
       <td>{{$user->email}}</td>
       <td>
-        <a href="#" class="text-danger">Supprimer</a>
+      <a href="{{ route('admin.delete', $user->id) }}" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">Supprimer</a>
       </td>
+
 
     </tr>
       </tr>

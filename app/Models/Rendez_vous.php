@@ -20,6 +20,7 @@ class Rendez_vous extends Model
         'specialite',
         'statut',
         'email_medecin',
+        'raison_refus',
         
     ];
 }

@@ -34,6 +34,7 @@ class RegisteredUserController extends Controller
             'code_etablissement' => ['required', 'string', 'max:6'],
             'nom_etablissement'=>['required', 'string'],
             'specialite' => ['required', 'string', 'max:255'],
+            'disponibilite'=>'required',
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -43,6 +44,7 @@ class RegisteredUserController extends Controller
             'code_etablissement'=> $request->code_etablissement,
             'nom_etablissement'=> $request->nom_etablissement,
             'specialite'=> $request->specialite,
+            'disponiblite'=>$request->disponibilite,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -53,5 +55,7 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+    
+    
     
 }

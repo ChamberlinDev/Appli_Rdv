@@ -23,11 +23,23 @@
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
         <div>
-            <x-input-label for="specialite" :value="__('Specialite')" />
+            <x-input-label for="specialite" :value="__('Specialité')" />
             <x-text-input id="specialite" name="specialite" type="text" class="mt-1 block w-full" :value="old('specialite', $user->specialite)" required autofocus autocomplete="specialite" />
             <x-input-error class="mt-2" :messages="$errors->get('specialite')" />
         </div>
 
+        <div>
+            <x-input-label for="disponibilite" :value="__('Disponibilité')" />
+            <select id="disponibilite" name="disponibilite" class="mt-1 block w-full" required>
+                <option value="Disponible" {{ old('disponibilite', $user->disponibilite) === 'Disponible' ? 'selected' : '' }}>
+                    Disponible
+                </option>
+                <option value="Pas disponible" {{ old('disponibilite', $user->disponibilite) === 'Pas disponible' ? 'selected' : '' }}>
+                    Pas disponible
+                </option>
+            </select>
+            <x-input-error class="mt-2" :messages="$errors->get('disponibilite')" />
+        </div>
        
 
         <div>
@@ -55,7 +67,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Mise a jour') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -64,7 +76,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('Modification reussite.') }}</p>
             @endif
         </div>
     </form>

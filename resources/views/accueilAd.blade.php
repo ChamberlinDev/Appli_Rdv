@@ -1,83 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Rdv_Medecal</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Tableau des users(medecins) -->
-    <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        </tr>
-        <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        </tr>
-    </tbody>
-    </table>
+<div class="container">
+    <h2 class="text-primary">Agenda medecin</h2>
 
-    <!-- Tableau des rendez-vous -->
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+    <form action="{{ route('agenda.store') }}" method="POST">
+        @csrf
+        @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+        <div class="row">
+            <!-- Sélection de la date début -->
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="jour_debut" class="form-label">Jour d'ouverture</label>
+                <input type="date" id="jour_debut" name="jour_debut" class="form-control" required>
+                </div>
+            </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{{asset('js/scripts.js')}}"></script>
-    </body>
-</html>
+            <!-- Sélection de la date fin -->
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="jour_fin" class="form-label">Jour de fermeture</label>
+
+                    <input type="date" id="jour_fin" name="jour_fin" class="form-control" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sélection de l'heure début -->
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="heure_fin" class="form-label">Heure d'ouverture</label>
+                    <input type="time" id="heure_debut" name="heure_debut" class="form-control" required>
+                </div>
+            </div>
+
+            <!-- Sélection de l'heure fin -->
+            <div class="col-md-6">
+                <div class="form-group">
+                <label for="heure_fin" class="form-label">Heure de fermeture</label>
+                    <input type="time" id="heure_fin" name="heure_fin" class="form-control"  required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+</div>

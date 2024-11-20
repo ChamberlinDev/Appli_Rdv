@@ -1,3 +1,7 @@
-<p>Bonjour {{ $nom_patient }}1</p>
-<p>Nous sommes désolés, mais votre rendez-vous a été refusé par Dr. {{$nom_medecin}}.</p>
+<p>Bonjour {{ $nom_patient }}!</p>
+<p>Nous sommes désolés, mais votre rendez-vous a été refusé par Dr. {{$nom_medecin}}.
+    Raison d'annulation: {{$raison_refus}}
+</p>
 <p>Merci de votre compréhension.</p>
+<p>Cordialement {{$nom_medecin}}.</p>
+

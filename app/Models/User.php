@@ -22,6 +22,7 @@ class User extends Authenticatable
         'code_etablissement',
         'nom_etablissement',
         'specialite',
+        'disponibilite',
         'email',
         'password',
     ];

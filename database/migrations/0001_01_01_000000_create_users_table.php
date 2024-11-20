@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('code_etablissement')->unique();
             $table->string('nom_etablissement');
             $table->string('specialite');
+            $table->enum('disponibilite', ['Disponible', 'Pas disponible'])->default('Disponible');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
