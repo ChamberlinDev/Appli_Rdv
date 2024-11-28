@@ -44,20 +44,20 @@
                 @enderror
             </div>
             <div class="mb-3">
-            <label for="nom_medecin" class="form-label">Nom du médecin</label>
-            <input type="text" name="nom_medecin" class="form-control form-control-sm" value="{{ $name }}" readonly>
+            <!-- <label for="nom_medecin" class="form-label">Nom du médecin</label> -->
+            <input type="hidden" name="nom_medecin" class="form-control form-control-sm" value="{{ $name }}" readonly>
         </div>
            
         <div class="mb-3">
-            <label for="specialite" class="form-label">Spécialité</label>
-            <input type="text" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
+            <!-- <label for="specialite" class="form-label">Spécialité</label> -->
+            <input type="hidden" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
         </div>
 
         <div class="mb-3">
             <input type="hidden" name="email_medecin" value="{{ $email }}">
         </div>
         <div class="mb-3">
-            <input type="text" name="nom_etablissement" value="{{ $nom_etablissement }}" readonly>
+            <input type="hidden" name="nom_etablissement" value="{{ $nom_etablissement }}" readonly>
         </div>
            
            

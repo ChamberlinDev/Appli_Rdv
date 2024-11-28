@@ -44,7 +44,7 @@ class PersonneController extends Controller
         // Authentifier l'utilisateur
         Auth::login($personne); // Cela devrait maintenant fonctionner sans erreur
 
-        return redirect()->route('loginAd'); // Red
+        return redirect()->route('loginView'); // Red
 }
 public function loginA(Request $request)
 {

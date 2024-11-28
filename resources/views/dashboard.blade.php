@@ -6,7 +6,6 @@
             {{ __('Espace Medecin') }}
         </h1>
     </x-slot>
-
    @include('medecins.layout')
 </x-app-layout>
 

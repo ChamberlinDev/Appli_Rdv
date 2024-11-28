@@ -43,9 +43,9 @@ Route::get('/medecin/{id}', [MedecinController::class, 'show'])->name('medecin.p
 Route::get('registerAd', [PersonneController::class, 'showRegistrationForm'])->name('registerView');
 Route::post('registerAdmin', [PersonneController::class, 'registerA'])->name('registerAdmin');
 Route::get('loginAd', [PersonneController::class, 'showLoginForm'])->name('loginView');
-Route::post('/loginAdmin', [PersonneController::class, 'loginA'])->name('loginAd');
+Route::post('loginAdmin', [PersonneController::class, 'loginA'])->name('loginAdmin');
 Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA');
-Route::get('Admin', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
+Route::get('AdminEspace', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
 
 
 // Route pour accepter un rendez-vous

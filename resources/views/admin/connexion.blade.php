@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" action="{{ route('loginAd') }}">
+        <form action="{{ route('loginAdmin') }}"method="POST" >
             @csrf
             <div class="mb-3">
                 <label for="username" class="form-label">Nom utilisateur</label>
@@ -39,7 +39,7 @@
                 <input type="password" name="password" id="password" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary w-100">Se connecter</button>
-            <!-- <a href="{{route('registerView')}}" >je n'ai pas de compte</a> -->
+            <a href="{{route('registerView')}}" >je n'ai pas de compte</a>
         </form>
     </div>
 </body>

@@ -38,7 +38,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="POST" action="{{ route('registerAdmin') }}">
+        <form  action="{{ route('registerAdmin') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="username" class="form-label">Nom utilisateur</label>

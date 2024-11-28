@@ -6,7 +6,6 @@
 <section id="about">
             <div class="container px-4 text-dark">
                
-                <hr>
                 @php
                 $ide=1;
                 @endphp
@@ -33,18 +32,18 @@
 							<h2>Medecins</h2>
 							<!-- <img src="assets/img/section-img.png" alt="#"> -->
 						</div>
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
      @foreach($users as $user) 
     <div class="col-lg-4 col-md-6 col-12">
         <!-- Affichage des médecins -->
         <div class="single-news">
             <p class="{{ $user->disponibilite === 'Disponible' ? 'text-success' : 'text-danger' }}">
-                <i class="fa-solid fa-circle" 
-                   style="color:{{$user->disponibilite === 'Disponible' ? 'green' : 'red'}};"></i> 
+                <i class="fa-solid fa-circle" ></i>
+                   <!-- style="color:{{$user->disponibilite === 'Disponible' ? 'green' : 'red'}};"--> 
                 {{ $user->disponibilite }}
             </p>
             <div class="news-head d-flex justify-content-center align-items-center">
-                <i class="bi bi-person-circle" style="font-size: 3rem;"></i>
+                <i class="bi bi-person-circle" style="font-size: 7rem;"></i>
             </div>
             <div class="d-flex justify-content-center mt-4">
                 <div class="news-content">
@@ -64,7 +63,6 @@
     </div>
 @endforeach
         </div>
-        <hr>
     </div>
 </section>
 <!-- End Affichage Médecins -->

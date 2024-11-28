@@ -4,6 +4,6 @@
     <p>Bonjour Dr. {{$nom_medecin}}! Vous avez une demande de rendez-vous de la part de {{ $nom_patient }}
         qui reponds au {{ $telephone }}, a la date du {{ $date }} a {{ $heure }}. Veuillez vous connecter sur votre espace medecin pour y repondre.
     </p>
-    <button class="btn btn-danger">Allez!!! </button>
+    <a href="/" class="btn">Allez!!! </a>
 </body>
 </html>

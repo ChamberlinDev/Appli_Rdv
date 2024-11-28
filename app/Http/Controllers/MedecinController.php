@@ -19,7 +19,9 @@ class MedecinController extends Controller
             session()->flash('message', 'Aucun médecin trouvé pour cette spécialité.');
         }
     } else {
-        $users = User::paginate(10);
+       $users = User::where('specialite', $request->specialite)
+             ->where('disponibilite', 'Disponible')
+             ->paginate(9);
     }
 
     return view('medecins.search', compact('users', 'specialite'));
