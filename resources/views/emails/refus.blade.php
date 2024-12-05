@@ -3,5 +3,5 @@
     Raison d'annulation: {{$raison_refus}}
 </p>
 <p>Merci de votre compréhension.</p>
-<p>Cordialement {{$nom_medecin}}.</p>
+<p>Cordialement Rencard_Med.</p>
 

@@ -114,38 +114,23 @@
 		
 		
 		<hr>
-		<section class="why-choose section" >
+		<section class="video">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>A propos de nous</h2>
-							<p>-------------------</p>
-						</div>
-					</div>
+			<div class="row">
+				<div class="section-title">
+					<h2 >Comment prendre un rendez-vous avec un médecin !!?</h2>
+					<img src="assets/img/logoRdv.jpg" alt="#" style="width: 20%; height: auto; max-width: 100%;">
 				</div>
-				<div class="row">
-					<div class="col-lg-6 col-12">
-						<!-- Start Choose Left -->
-						<div class="choose-left">
-							<h3>C'est quoi Rencard_Med</h3>
-							<p>Rencard_Med est une plateforme de prise de rendez-vous medical entre un patient et un medecin de n'importe quelle hopital du senegal </p>
-							<p>Ceci facilite l'operation de rendez-vous pour les administration des etablissements de sante car un patient depuis chez lui peut prendre
-							 rendez-vous avec un medecin de son choix selon de la specialité voulu. A noter tout actions sur la plateforme est suvie et tracable.</p>
-							
-						</div>
-						<!-- End Choose Left -->
-					</div>
-					<div class="col-lg-3 col-md-3 col-12">
-								<!-- Debut Logo -->
-						<div class="logo">
-							<a href="/"><img src="assets/img/Medical Care2.png" alt="#"></a>
-							</div>
-					
-					</div>
-				</div>
+			
+	
+			<div class="col-lg-12 col-md-12 d-flex justify-content-center align-items-center">
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iqJjtTA4oyY?si=N9rYBpDmuQKCxTrE" title="YouTube video player"
+			 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+			 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</div>
 			</div>
 		</section>
+		
 		<hr>
 		<!-- Nos partenaires -->
 		<div class="section-title">
@@ -190,23 +175,42 @@
 		
 		
 <hr>
-<section class="video">
-			<div class="container">
-			<div class="row">
-				<div class="section-title">
-					<h2 >Comment prendre un rendez-vous avec un médecin !!?</h2>
-					<img src="assets/img/logoRdv.jpg" alt="#" style="width: 20%; height: auto; max-width: 100%;">
-				</div>
-			
-	
-			<div class="col-lg-12 col-md-12 d-flex justify-content-center align-items-center">
-			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iqJjtTA4oyY?si=N9rYBpDmuQKCxTrE" title="YouTube video player"
-			 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-			 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			</div>
-		</section>
 
+<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>A propos de nous</h2>
+							<p>-------------------</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>C'est quoi Rencard_Med ?</h3>
+							<p>Rencard_Med est une plateforme de prise de rendez-vous medical entre un patient et un medecin de n'importe quelle hopital du senegal </p>
+							<p>Ceci facilite l'operation de rendez-vous pour les administration des etablissements de sante car un patient depuis chez lui peut prendre
+							 rendez-vous avec un medecin de son choix selon de la specialité voulu.
+							 Le but de Rencard_Med est d'eviter certaines frustations des patients concernant de la prise de rendez-vous avec un medecin et permettre
+							 aux patients de selectionner un creneau horaire. Le medecin peut reporter le rendez-vous en cas d'imprevus de derniere seconde ou d'annuler
+							 en donnant une raison de refus.  A noter tout actions sur la plateforme est suvie et tracable.</p>
+							
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-3 col-md-3 col-12">
+								<!-- Debut Logo -->
+						<div class="logo">
+							<a href="/"><img src="assets/img/Medical Care2.png" alt="#"></a>
+							</div>
+					
+					</div>
+				</div>
+			</div>
+		</section> 
 		<hr>
 <!-- Start statistics -->
 <div class="section-title">

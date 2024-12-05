@@ -13,7 +13,6 @@
 
     <p>Nous vous remercions de votre compréhension.</p>
 
-    <p>Cordialement,</p>
-    <p>{{ $nom_medecin }}</p>
+    <p>Cordialement,Rencard_Med</p>
 </body>
 </html>
