@@ -242,23 +242,13 @@
 						</div>
 						<!-- End nombre docteur -->
 					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start nombre rdv -->
-						<div class="single-fun">
-							<i class="icofont-simple-smile"></i>
-							<div class="content">
-								<span class="counter">{{ $appointmentsCount }}</span>
-								<p>Rendez-vous</p>
-							</div>
-						</div>
-						<!-- End nombre rdv-->
-					</div>
+					
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Start annee experience -->
 						<div class="single-fun">
 							<i class="icofont icofont-table"></i>
 							<div class="content">
-								<p class="counter">starting</p>
+								<p>1 an</p>
 								<p>Année d'experience</p>
 							</div>
 						</div>

@@ -45,8 +45,9 @@ Route::post('registerAdmin', [PersonneController::class, 'registerA'])->name('re
 Route::get('loginAd', [PersonneController::class, 'showLoginForm'])->name('loginView');
 Route::post('loginAdmin', [PersonneController::class, 'loginA'])->name('loginAdmin');
 Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA');
-Route::get('AdminEspace', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
 
+Route::get('AdminEspace', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
+Route::get('/admin/delete/{id}', [AccueilController::class, 'deleteUser'])->name('admin.delete');
 
 // Route pour accepter un rendez-vous
 Route::get('/rdv/accepter/{id}', [PatientController::class, 'accepterRdv'])->name('accepter.rdv');
@@ -55,4 +56,4 @@ Route::post('/rdv/refuser/{id}', [PatientController::class, 'refuserRdv'])->name
 //reporter un rdv
 Route::post('/rdv/reporter/{id}', [PatientController::class, 'reporter'])->name('reporter.rdv');
 
-Route::get('/admin/delete/{id}', [AccueilController::class, 'deleteUser'])->name('admin.delete');
+

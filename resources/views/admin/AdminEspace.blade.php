@@ -102,6 +102,11 @@
             </div>
 			<hr>
         </div>
+        @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
         <h3 id="page-title">Bienvenue sur l'espace Admin</h3>
         <div id="content-area">
     <!-- Main Content Area -->

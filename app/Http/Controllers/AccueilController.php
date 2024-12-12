@@ -37,12 +37,14 @@ public function deleteUser($id)
     // Trouver l'utilisateur par son ID
     $user = User::findOrFail($id);
 
-    // Supprimer l'utilisateur
-    $user->delete();
-
-    // Rediriger avec un message de succès
-    return redirect()->route('/AdminEspace')->with('success', 'Utilisateur supprimé avec succès.');
+    if ($user) {
+        $user->delete();
+        return redirect()->route('AdminEspace')->with('success', 'Utilisateur supprimé avec succès.');
+    }
+    
+    return redirect()->route('AdminEspace')->with('error', 'Utilisateur non trouvé.');
 }
+
 
     
 
