@@ -1,12 +1,11 @@
 <a class="btn" href="/" type="submit"><<<-precendent</a>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-								
+
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
     
         <form class="form-control w-50" action="{{ route('valider-rdv') }}" method="post" >
         @csrf
-       <div class="text-center text-primary"><h3>Prendre rendez-vous</h3></div>  
-    
+        <div class="text-center text-primary"><h1>Prendre rendez-vous</h1></div>
             <div class="mb-3">
                 <label for="nom_patient" class="form-label">Nom du patient</label>
                 <input type="text" name="nom_patient" class="form-control form-control-sm"  >
@@ -43,21 +42,23 @@
                 <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>
+            <h5>Informations du medecin</h5>
+            <hr>
             <div class="mb-3">
-            <!-- <label for="nom_medecin" class="form-label">Nom du médecin</label> -->
-            <input type="hidden" name="nom_medecin" class="form-control form-control-sm" value="{{ $name }}" readonly>
+            <label for="nom_medecin" class="form-label">Nom du médecin</label>
+            <input type="text" name="nom_medecin" class="form-control form-control-sm" value="{{ $name }}" readonly>
         </div>
            
         <div class="mb-3">
-            <!-- <label for="specialite" class="form-label">Spécialité</label> -->
-            <input type="hidden" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
+            <label for="specialite" class="form-label">Spécialité</label>
+            <input type="text" name="specialite" class="form-control form-control-sm" value="{{ $specialite }}" readonly>
         </div>
 
         <div class="mb-3">
             <input type="hidden" name="email_medecin" value="{{ $email }}">
         </div>
         <div class="mb-3">
-            <input type="hidden" name="nom_etablissement" value="{{ $nom_etablissement }}" readonly>
+            <input type="text" name="nom_etablissement" value="{{ $nom_etablissement }}" readonly>
         </div>
            
            
