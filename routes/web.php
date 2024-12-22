@@ -48,6 +48,9 @@ Route::post('logoutad', [PersonneController::class, 'logoutA'])->name('logoutA')
 
 Route::get('AdminEspace', [AccueilController::class,'AdminEspace'])->name('AdminEspace');
 Route::get('/admin/delete/{id}', [AccueilController::class, 'deleteUser'])->name('admin.delete');
+Route::post('/ajoutMed', [RegisteredUserController::class, 'ajoutMed'])->name('ajoutmed');
+Route:: get('/indexAjoutMed', [RegisteredUserController::class, 'ajoutm'])->name('ajoutm');
+
 
 // Route pour accepter un rendez-vous
 Route::get('/rdv/accepter/{id}', [PatientController::class, 'accepterRdv'])->name('accepter.rdv');

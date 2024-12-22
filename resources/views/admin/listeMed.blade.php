@@ -11,6 +11,7 @@
 <!-- <a class="text-primary" href="#">Gerer</a> -->
 <hr>
 <div class="row">
+  <a class="btn btn-primary" href="{{route('ajoutm')}}">Ajouter medecin</a>
 <table class="table text-dark">
   <thead>
     <tr>
@@ -20,6 +21,7 @@
       <th>Nom etablissement</th>
       <th>Specialite</th>
       <th>Email</th>
+      <th>Disponibilité</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -34,8 +36,10 @@
       <td>{{$user->nom_etablissement}}</td>
       <td>{{$user->specialite}}</td>
       <td>{{$user->email}}</td>
+      <td>{{$user->disponibilite}}</td>
       <td>
       <a href="{{ route('admin.delete', $user->id) }}" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')">Supprimer</a>
+
       </td>
 
 

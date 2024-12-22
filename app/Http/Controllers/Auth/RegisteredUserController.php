@@ -56,6 +56,30 @@ class RegisteredUserController extends Controller
         return redirect(route('dashboard', absolute: false));
     }
     
-    
-    
+    public function ajoutMed(Request $request){
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'code_etablissement' => ['required', 'string', 'max:6'],
+            'nom_etablissement'=>['required', 'string'],
+            'specialite' => ['required', 'string', 'max:255'],
+            'disponibilite'=>'required',
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'code_etablissement'=> $request->code_etablissement,
+            'nom_etablissement'=> $request->nom_etablissement,
+            'specialite'=> $request->specialite,
+            'disponiblite'=>$request->disponibilite,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+        
+        return redirect()->route('AdminEspace');
+    }
+    public function ajoutm(){
+        return view('admin.ajoutMed');
+    }
 }
