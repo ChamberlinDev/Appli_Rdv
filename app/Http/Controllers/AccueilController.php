@@ -9,14 +9,21 @@ use Illuminate\Http\Request;
 class AccueilController extends Controller
 {
     public function index(){
-        $hospitalsCount = User::whereNotNull('nom_etablissement')->where('nom_etablissement', '!=', '')->count();
+        $hospitalsCount = User::whereNotNull('nom_etablissement')
+                              ->where('nom_etablissement', '!=', '')
+                              ->distinct('nom_etablissement')
+                              ->count('nom_etablissement');
+                              
         $doctorsCount = User::count();  
         $appointmentsCount = Rendez_vous::count();  
-       
+        
         $users = User::paginate(10); 
+        
         // Passer ces valeurs à la vue
-        return view('welcome', compact( 'users','hospitalsCount', 'doctorsCount', 'appointmentsCount'));
+        return view('welcome', compact('users','hospitalsCount', 'doctorsCount', 'appointmentsCount'));
     }
+    
+    
   
     public function Medecin(){
          $users = User::paginate(10); 

@@ -57,7 +57,7 @@ public function loginA(Request $request)
     ]);
 
     if ($validator->fails()) {
-        return redirect()->route('loginAd')
+        return redirect()->route('loginView')
             ->withErrors($validator)
             ->withInput();
     }
@@ -69,7 +69,7 @@ public function loginA(Request $request)
         Auth::login($personne); // Connecter l'utilisateur
         return redirect()->route('AdminEspace'); // Rediriger si la connexion réussit
     } else {
-        return redirect()->route('loginAd')
+        return redirect()->route('loginView')
             ->withErrors(['username' => 'Identifiants incorrects'])
             ->withInput(); // Afficher l'erreur si la connexion échoue
     }
@@ -79,6 +79,6 @@ public function loginA(Request $request)
     public function logoutA()
     {
         Auth::logout();
-        return redirect()->route('loginAd');
+        return redirect()->route('loginView');
     }
 }

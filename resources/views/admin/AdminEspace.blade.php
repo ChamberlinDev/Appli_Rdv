@@ -84,10 +84,11 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h2>Admin</h2>
+
         <ul>
             <li id="doctors" onclick="showContent('doctors')">Liste des Médecins</li>
             <li id="appointments" onclick="showContent('appointments')">Historique des Rendez-vous</li>
-			<li id="stats" onclick="showContent('stats')">Statistiques</li>
+			<li id="stats" onclick="showContent('stats')">Voir l'effectif</li>
 
         </ul>
 		
@@ -178,7 +179,7 @@
                 contentArea.innerHTML = `
                 @include('admin.listeMed')`;
             } else if (page === 'stats') {
-                pageTitle.textContent = "Statistiques";
+                pageTitle.textContent = "Effectifs";
                 contentArea.innerHTML = `
                 @include('admin.stats')`;
             } else if (page === 'appointments') { // Affichage de l'historique des rendez-vous

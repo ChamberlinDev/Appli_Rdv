@@ -31,8 +31,8 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'code_etablissement' => ['required', 'string', 'max:6'],
             'nom_etablissement'=>['required', 'string'],
+            'code_etablissement' => ['required', 'string', 'max:5'], 
             'specialite' => ['required', 'string', 'max:255'],
             'disponibilite'=>'required',
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -59,7 +59,7 @@ class RegisteredUserController extends Controller
     public function ajoutMed(Request $request){
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'code_etablissement' => ['required', 'string', 'max:6'],
+            'code_etablissement' => ['required', 'string', 'max:5'], 
             'nom_etablissement'=>['required', 'string'],
             'specialite' => ['required', 'string', 'max:255'],
             'disponibilite'=>'required',

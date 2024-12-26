@@ -2,13 +2,13 @@
         <section>
 <div class="section-title">
 <hr>
-		<h2 class="text-primary" >S'ENREGISTRER </h2>
+		<h2 class="text-primary" >ENREGISTRER UN MEDECIN</h2>
 		<!-- <img src="assets/img/section-img.png" alt="#"> -->
 	</div>
     </section>
 <x-guest-layout>
     
-    <form method="POST" action="{{ route('ajoutmed') }}">
+    <form method="POST" action="{{ route('register') }}">
         @csrf
        
         <!-- Name -->
@@ -78,10 +78,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4 text-primary">
-            <a href="{{ route('login') }}">
-                {{ __('J ai deja un compte medecin!') }}
-            </a>
-
+            
             <x-primary-button class="ms-4 text-primary">
                 {{ __('Soumettre') }}
             </x-primary-button>
