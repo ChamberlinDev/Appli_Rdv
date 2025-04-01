@@ -109,7 +109,7 @@ class PatientController extends Controller
 
         // Récupère les rendez-vous qui correspondent au médecin connecté
         $appointments = Rendez_vous::where('email_medecin', $user->email)->get();
-    return view('dashboard',  compact('appointments', 'user'));
+        return view('dashboard',  compact('appointments', 'user'));
         
     }
    
